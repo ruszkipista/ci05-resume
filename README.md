@@ -1,2 +1,2 @@
 # ci05-resume
-Code Institute "Resume" code along project 
+Code Institute "User Centric Frontend Development - Resume" code along mini project 
