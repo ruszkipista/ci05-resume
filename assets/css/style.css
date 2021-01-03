@@ -6,3 +6,12 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size:xx-large
 }
+
+.logo {
+    background: url('../img/rosie-odenkirk-bw.png') center  / cover no-repeat;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+}
+.logo:hover {
+    background-image: url('../img/rosie-odenkirk-color.jpg');
+}
