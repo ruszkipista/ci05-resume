@@ -2,19 +2,21 @@
 :root{
   --font-name : "Exo", sans-serif;
   --font-title: "Roboto", sans-serif;
-  --color-name-title: #fff;
-  --color-item: #fafafa;
-  --bg-color-name-title:#676767;
+  --color-title: #fff;
+  --color-item:  #fafafa;
+  --color-heading:#676767;
+  --color-footer :#525252;
 }
 a {
     border: .5px dotted red;
 }
 
-.bg-color-name-title    { background-color: var(--bg-color-name-title); }
-.ui-menu-color-home     { background-color: #e67e22;}
-.ui-menu-color-resume   { background-color: #9b59b6;}
-.ui-menu-color-contact  { background-color: #3498db;}
-.ui-menu-color-download { background-color: #525252;}
+.bg-menu-color-home     { background-color: #e67e22;}
+.bg-menu-color-resume   { background-color: #9b59b6;}
+.bg-menu-color-contact  { background-color: #3498db;}
+.bg-menu-color-download { background-color: var(--color-footer);}
+
+header { background-color: var(--color-heading); }
 
 .heading {
     margin-left: 50px;
@@ -32,7 +34,7 @@ a {
     font-weight: 100;
     font-size: 46px;
     margin-top:50px;
-    color:var(--color-name-title);
+    color:var(--color-title);
 }
 .title {
     font-family: var(--font-title);
@@ -40,7 +42,7 @@ a {
     font-size: 28px;
     margin-top:20px;
     margin-bottom: 90px;
-    color: var(--color-name-title);
+    color: var(--color-title);
 }
 ul#nav {
     margin:0;
@@ -61,7 +63,6 @@ ul#nav > li > a > i {
 }
 ul#nav > li > a > span {
     color: var(--color-item);
-    text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 300;
     letter-spacing: 2px;
@@ -103,4 +104,12 @@ ul#nav > li > a > span {
   .hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
+  }
+
+  footer { background-color: var(--color-footer);}
+
+  footer h5 {
+        font-family: var(--font-name);
+        font-weight: 300;
+        color:var(--color-item);
   }
