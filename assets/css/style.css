@@ -2,18 +2,22 @@
 :root{
   --font-name : "Exo", sans-serif;
   --font-title: "Roboto", sans-serif;
-  --color-title: #fff;
-  --color-item:  #fafafa;
+  --color-title  :#fff;
+  --color-item   :#fafafa;
   --color-heading:#676767;
   --color-footer :#525252;
+  --color-home   :#e67e22;
+  --color-resume :#9b59b6;
+  --color-social :#8f8f8f;
+  --color-contact:#3498db;
 }
 a {
     border: .5px dotted red;
 }
 
-.bg-menu-color-home     { background-color: #e67e22;}
-.bg-menu-color-resume   { background-color: #9b59b6;}
-.bg-menu-color-contact  { background-color: #3498db;}
+.bg-menu-color-home     { background-color: var(--color-home);}
+.bg-menu-color-resume   { background-color: var(--color-resume);}
+.bg-menu-color-contact  { background-color: var(--color-contact);}
 .bg-menu-color-download { background-color: var(--color-footer);}
 
 header { background-color: var(--color-heading); }
@@ -106,10 +110,42 @@ ul#nav > li > a > span {
     transform: scaleY(1);
   }
 
-  footer { background-color: var(--color-footer);}
+footer { 
+    background-color: var(--color-footer);
+    min-height: 120px;
+}
 
-  footer h5 {
-        font-family: var(--font-name);
-        font-weight: 300;
-        color:var(--color-item);
-  }
+footer h5 {
+    font-family: var(--font-name);
+    font-weight: 300;
+    color:var(--color-item);
+}
+footer p {
+    color:var(--color-title);
+}
+footer i.fa-download {
+    font-size: 18px;
+    color: var(--color-title);
+    text-align: center;
+    padding-left: 5px;
+    transition: all 0.35s ease-in-out;
+}
+footer i.fa-download:hover {
+    color: var(--color-resume);
+}
+
+div.social-links i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 7px;
+    border-radius: 50%;
+    color: var(--color-title);
+    background-color: var(--color-social);
+    transition: all 0.35s ease-in-out;
+}
+div.social-links i:hover {
+    background-color: var(--color-contact);
+}
