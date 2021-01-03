@@ -4,12 +4,13 @@
   --font-title: "Roboto", sans-serif;
   --color-name-title: #fff;
   --color-item: #fafafa;
+  --bg-color-name-title:#676767;
 }
-li {
+a {
     border: .5px dotted red;
 }
 
-.bg-color-name-title    { background-color: #676767; }
+.bg-color-name-title    { background-color: var(--bg-color-name-title); }
 .ui-menu-color-home     { background-color: #e67e22;}
 .ui-menu-color-resume   { background-color: #9b59b6;}
 .ui-menu-color-contact  { background-color: #3498db;}
@@ -50,6 +51,7 @@ ul#nav > li {
 ul#nav > li > a {
     display: block;
     text-decoration: none;
+    height: 100%;
 }
 ul#nav > li > a > i {
     color: var(--color-item);
@@ -64,3 +66,41 @@ ul#nav > li > a > span {
     font-weight: 300;
     letter-spacing: 2px;
 }
+
+/* Sweep To Bottom hover effect: sourced from https://github.com/IanLunn/Hover/ */
+.hvr-sweep-to-bottom {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .hvr-sweep-to-bottom:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+  .hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
+    color: white;
+  }
+  .hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
