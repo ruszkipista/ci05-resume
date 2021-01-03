@@ -1,3 +1,8 @@
-p, h1, h2, h3, div, header, main, article, footer {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100,200,300,400,500,600,700&family=Exo:wght@100,200,300,400,500,600,700');
+p, h1, h2, h3, div, header, main, section, article, footer {
     border: .5px dotted red;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size:xx-large
 }
