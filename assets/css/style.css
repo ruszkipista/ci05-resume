@@ -4,7 +4,7 @@
   --font-title: "Roboto", sans-serif;
   --color-name-title: #fff;
 }
-p, h1, h2, h3, div, header, main, section, article, footer {
+li {
     border: .5px dotted red;
 }
 
@@ -38,5 +38,18 @@ p, h1, h2, h3, div, header, main, section, article, footer {
     font-size: 28px;
     margin-top:20px;
     margin-bottom: 90px;
+    color: var(--color-name-title);
+}
+ul#nav > li {
+    line-height: 120px;
+}
+ul#nav > li > a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+ul#nav > li > a > i ,
+ul#nav > li > a > span {
     color: var(--color-name-title);
 }
