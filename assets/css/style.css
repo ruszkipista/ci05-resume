@@ -23,7 +23,7 @@ a, div, h5, p {
 header { background-color: var(--color-heading); }
 
 .heading {
-    margin-left: 50px;
+    margin-left: 10vw;
 }
 .logo {
     background: url('../img/rosie-odenkirk-bw.png') center  / cover no-repeat;
