@@ -35,12 +35,14 @@ header { background-color: var(--color-heading); }
     font-weight: 100;
     font-size: 46px;
     color:var(--color-title);
+    padding-right: 1rem;
 }
 .title {
     font-family: var(--font-title);
     font-weight: 200;
     font-size: 28px;
     color: var(--color-title);
+    padding-right: 1rem;
 }
 ul#nav {
     margin:0;
@@ -106,12 +108,19 @@ ul#nav > li > a > span {
 
 main {
     background-color: var(--color-title);
+    font-family: var(--font-title);
 }
 main h3 {
     font-family: var(--font-name);
 }
-main p {
-    font-family: var(--font-title);
+main div.key {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+main div.value {
+    word-break: break-all;
+    padding-bottom: 15px;
+    padding-left: 0;
 }
 main i {
     font-size: 26px;
