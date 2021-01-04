@@ -2,14 +2,14 @@
 :root{
   --font-name : "Exo", sans-serif;
   --font-title: "Roboto", sans-serif;
-  --color-title  :#fff;
-  --color-item   :#fafafa;
-  --color-heading:#676767;
-  --color-footer :#525252;
-  --color-home   :#e67e22;
-  --color-resume :#9b59b6;
-  --color-social :#8f8f8f;
-  --color-contact:#3498db;
+  --color-title   :#fff;
+  --color-item    :#fafafa;
+  --color-heading :#676767;
+  --color-footer  :#525252;
+  --color-home    :#e67e22;
+  --color-resume  :#9b59b6;
+  --color-social  :#f4f4f4;
+  --color-contact :#3498db;
 }
 a, div, h5, p {
     border: .5px dotted red;
@@ -110,9 +110,15 @@ main {
 main h3 {
     font-family: var(--font-name);
 }
+main p {
+    font-family: var(--font-title);
+}
 main i {
     font-size: 26px;
     color: var(--color-home);
+}
+main div.personal-info {
+    background-color: var(--color-social);
 }
 
 footer { 
@@ -147,8 +153,8 @@ div.social-links i {
     font-size: 13px;
     line-height: 7px;
     border-radius: 50%;
-    color: var(--color-title);
-    background-color: var(--color-social);
+    color: var(--color-social);
+    background-color: var(--color-heading);
     transition: all 0.35s ease-in-out;
 }
 div.social-links i:hover {
