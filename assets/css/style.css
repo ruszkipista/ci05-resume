@@ -22,9 +22,6 @@ a, div, h5, p {
 
 header { background-color: var(--color-heading); }
 
-.heading {
-    margin-left: 10vw;
-}
 .logo {
     background: url('../img/rosie-odenkirk-bw.png') center  / cover no-repeat;
     min-height: 360px;
@@ -37,15 +34,12 @@ header { background-color: var(--color-heading); }
     font-family: var(--font-name);
     font-weight: 100;
     font-size: 46px;
-    margin-top:50px;
     color:var(--color-title);
 }
 .title {
     font-family: var(--font-title);
     font-weight: 200;
     font-size: 28px;
-    margin-top:20px;
-    margin-bottom: 90px;
     color: var(--color-title);
 }
 ul#nav {
@@ -81,8 +75,8 @@ ul#nav > li > a > span {
     transition-property: color;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
-  }
-  .hvr-sweep-to-bottom:before {
+}
+.hvr-sweep-to-bottom:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -101,14 +95,25 @@ ul#nav > li > a > span {
     transition-duration: 0.1s;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
-  }
-  .hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
+}
+.hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
     color: white;
-  }
-  .hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
+}
+.hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
-  }
+}
+
+main {
+    background-color: var(--color-title);
+}
+main h3 {
+    font-family: var(--font-name);
+}
+main i {
+    font-size: 26px;
+    color: var(--color-home);
+}
 
 footer { 
     background-color: var(--color-footer);
