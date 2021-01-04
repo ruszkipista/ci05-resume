@@ -19,6 +19,8 @@ a, div, h5, p {
 .bg-menu-color-resume   { background-color: var(--color-resume);}
 .bg-menu-color-contact  { background-color: var(--color-contact);}
 .bg-menu-color-download { background-color: var(--color-footer);}
+.color-icon-home   { color: var(--color-home);}
+.color-icon-resume { color: var(--color-resume);}
 
 header { background-color: var(--color-heading); }
 
@@ -124,7 +126,6 @@ main div.value {
 }
 main i {
     font-size: 26px;
-    color: var(--color-home);
 }
 main div.personal-info {
     background-color: var(--color-social);
