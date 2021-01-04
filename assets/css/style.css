@@ -11,7 +11,7 @@
   --color-social :#8f8f8f;
   --color-contact:#3498db;
 }
-a {
+a, div, h5, p {
     border: .5px dotted red;
 }
 
@@ -112,7 +112,7 @@ ul#nav > li > a > span {
 
 footer { 
     background-color: var(--color-footer);
-    min-height: 120px;
+    min-height: 100px;
 }
 
 footer h5 {
@@ -137,7 +137,7 @@ footer i.fa-download:hover {
 div.social-links i {
     width: 32px;
     height: 32px;
-    padding: 12px 0;
+    padding: 12px 0 0 0;
     text-align: center;
     font-size: 13px;
     line-height: 7px;
