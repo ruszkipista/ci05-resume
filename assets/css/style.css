@@ -10,6 +10,7 @@
   --color-resume  :#9b59b6;
   --color-social  :#f4f4f4;
   --color-contact :#3498db;
+  --color-ci-red  :#e84610;
 }
 a, div, h5, p {
     border: .5px dotted red;
@@ -25,6 +26,7 @@ a, div, h5, p {
 .color-resume      { color: var(--color-resume);}
 .bg-color-resume   { background-color: var(--color-resume);}
 .bg-color-social   { background-color: var(--color-social);}
+.bg-color-ci-red   { background-color: var(--color-ci-red);}
 
 /** HEADER **/
 header { background-color: var(--color-heading); }
@@ -169,6 +171,10 @@ main div.personal-info {
 /* SKILLS */
 .progress {
     height: 2rem;
+}
+/* CONTACT */
+main.contact {
+    font-family: var(--font-title);    
 }
 
 /** FOOTER **/
