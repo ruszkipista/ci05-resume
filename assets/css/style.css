@@ -12,9 +12,6 @@
   --color-contact :#3498db;
   --color-ci-red  :#e84610;
 }
-a, div, h5, p {
-    border: .5px dotted red;
-}
 
 .bg-color-home     { background-color: var(--color-home);}
 .bg-color-resume   { background-color: var(--color-resume);}
