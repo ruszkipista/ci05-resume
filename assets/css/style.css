@@ -22,8 +22,10 @@ a, div, h5, p {
 .color-icon-home   { color: var(--color-home);}
 .color-icon-resume { color: var(--color-resume);}
 
+/** HEADER **/
 header { background-color: var(--color-heading); }
 
+/* LOGO */
 .logo {
     background: url('../img/rosie-odenkirk-bw.png') center  / cover no-repeat;
     min-height: 360px;
@@ -32,6 +34,7 @@ header { background-color: var(--color-heading); }
 .logo:hover {
     background-image: url('../img/rosie-odenkirk-color.jpg');
 }
+/* NAME and TITLE */
 .name {
     font-family: var(--font-name);
     font-weight: 100;
@@ -108,12 +111,20 @@ ul#nav > li > a > span {
     transform: scaleY(1);
 }
 
+/** MAIN **/
 main {
     background-color: var(--color-title);
     font-family: var(--font-title);
 }
 main h3 {
     font-family: var(--font-name);
+}
+main i {
+    font-size: 26px;
+}
+/* PERSONAL INFO */
+main div.personal-info {
+    background-color: var(--color-social);
 }
 main div.key {
     font-weight: bold;
@@ -124,13 +135,12 @@ main div.value {
     padding-bottom: 15px;
     padding-left: 0;
 }
-main i {
-    font-size: 26px;
-}
-main div.personal-info {
-    background-color: var(--color-social);
+/* SKILLS */
+.progress {
+    height: 2rem;
 }
 
+/** FOOTER **/
 footer { 
     background-color: var(--color-footer);
     min-height: 100px;
