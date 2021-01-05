@@ -19,6 +19,7 @@ a, div, h5, p {
 .bg-color-resume   { background-color: var(--color-resume);}
 .bg-color-contact  { background-color: var(--color-contact);}
 .bg-color-download { background-color: var(--color-footer);}
+.color-item        { color: var(--color-item);}
 .color-home        { color: var(--color-home);}
 .bg-color-home     { background-color: var(--color-home);}
 .color-resume      { color: var(--color-resume);}
@@ -137,6 +138,32 @@ main div.value {
 }
 /* WORK HISTORY */
 main div.personal-info {
+    background-color: var(--color-social);
+}
+.timeline-item {
+    padding: 2em 2em 0em 2em;
+    position: relative;
+    border-left: 1px solid;
+}
+.timeline-item:before {
+    content: attr(data-dates);
+    display: block;
+    position: absolute;
+    left: 2.5em;
+    top: 1em;
+    font-family: var(--font-name);
+    font-weight: 500;
+    font-size: .8em;
+}
+.timeline-item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -0.4em;
+    top: 1em;
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50%;
     background-color: var(--color-social);
 }
 /* SKILLS */
