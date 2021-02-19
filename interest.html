@@ -162,26 +162,27 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     <!-- Google map -->
-    <!-- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4URTnGHXQNlmrtIlfdICht6Pc94yMN8s&callback=initMap" type="text/javascript"></script>
-    <script>
-      function initMap(){
-        const map = new google.maps.MAP(document.getElementById('map'), {zoom:3,center:{lat:46,lng:-33}})
-      }
-    </script> -->
-
-    <script>
-      function initMap() {
-          var map = new google.maps.Map(document.getElementById("map"), {
-              zoom: 3,
-              center: {
-                  lat: 46.619261,
-                  lng: -33.134766
-              }
-          });
-      }
-  </script>
   <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4URTnGHXQNlmrtIlfdICht6Pc94yMN8s&callback=initMap"></script>    
-  </body>
+  <script>
+    function initMap() {
+      const mapProperties = {
+            zoom: 9,
+            center: {lat: 40.8, lng: -73.93  }
+        }
+      let map = new google.maps.Map(document.getElementById("map"), mapProperties);
+
+      const labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+      const locations = [{lat: 40.785091, lng: -73.968285},
+                         {lat: 41.084045, lng: -73.874256},
+                         {lat: 40.754932, lng: -73.984016}];
+      const markers = locations.map(function(location, index) {
+          return new google.maps.Marker({position: location, 
+                                        label:     labels[index % labels.length]});
+      });
+      const markerImagePath = 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m';
+      const markerCluster = new MarkerClusterer(map, markers, {imagePath: markerImagePath});
+    }
+  </script>
+</body>
 </html>
