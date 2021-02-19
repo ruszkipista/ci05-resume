@@ -10,12 +10,16 @@
   --color-resume  :#9b59b6;
   --color-social  :#f4f4f4;
   --color-contact :#3498db;
+  --color-interest:#e74c3c;
+  --color-github  :#1c4a6c;
   --color-ci-red  :#e84610;
 }
 
 .bg-color-home     { background-color: var(--color-home);}
 .bg-color-resume   { background-color: var(--color-resume);}
 .bg-color-contact  { background-color: var(--color-contact);}
+.bg-color-interest { background-color: var(--color-interest);}
+.bg-color-github   { background-color: var(--color-github);}
 .bg-color-download { background-color: var(--color-footer);}
 .color-item        { color: var(--color-item);}
 .color-home        { color: var(--color-home);}

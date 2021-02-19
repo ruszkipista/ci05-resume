@@ -11,9 +11,14 @@
     <!-- Font Awsome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
     <!-- local CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/github.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <!-- PAGE TITLE -->
     <title>Rosie</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- local JS -->
+    <script type="text/javascript" src="./assets/js/github.js"></script>
   </head>
 
   <body class="container-fluid p-0 m-0">
@@ -59,19 +64,18 @@
     </header>
 
     <!-- MAIN -->
-    <main class="contact row bg-color-social">
-        <!-- CONTACT -->
+    <main class="contact row bg-color-contact">
+        <!-- GITHUB PROJECTS -->
         <div class="col-12">
-          <h3 class="text-uppercase text-center pt-2">Got a project in mind?</h3>
-          <h5 class="text-uppercase text-center pt-2 pb-2">Let's work together!</h5>
+          <h3 class="text-uppercase text-center pt-2">View My GitHub Projects:</h3>
+          <h5 class="text-uppercase text-center pt-2 pb-2">(or change the username to search for other user profiles)</h5>
         </div>
-        <!-- CONTACT FORM -->
-        <form class="text-center col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3" action="">
-          <input id="fullname"     type="text"   class="form-control" name="name"  placeholder="Name"  required>
-          <input id="emailaddress" type="email"  class="form-control" name="email" placeholder="Email" required>
-          <textarea id="projectsummary" rows="5" class="form-control" name="projectsummary" placeholder="Project Summary" required></textarea>
-          <button type="submit" class="btn bg-color-ci-red color-item my-2">Send Project Request</button>
-        </form>
+
+        <div class="center-form">
+          <input type="text" id="gh-username" value="octocat" oninput="fetchGitHubInformation()">
+          <div id="gh-user-data" class="clearfix"></div>
+          <div id="gh-repo-data" class="clearfix"></div>
+      </div>
 
     </main>
 
