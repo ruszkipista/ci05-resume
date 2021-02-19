@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <!-- PAGE TITLE -->
     <title>Rosie</title>
+    <style>
+      div#map {min-height: 360px;}
+    </style>
   </head>
 
   <body class="container-fluid p-0 m-0">
@@ -60,12 +63,14 @@
 
     <!-- MAIN -->
     <main class="row">
+
         <!-- ATTENDED PLACES -->
-        <div class="bg-color-interest col-md-4 p-4">
+        <div class="bg-color-social col-md-4 p-4">
           <h3 class="text-uppercase ps-4">Conferences and Meetups attended</h3>
-          <div class="row">
-          </div>
+          <!-- GOOGLE MAP -->
+          <div id="map" class="row"></div>
         </div>
+
         <!-- MY GROUPS -->
         <div class="col-md-8 p-4">
           <div class="row">
@@ -156,5 +161,27 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <!-- Google map -->
+    <!-- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4URTnGHXQNlmrtIlfdICht6Pc94yMN8s&callback=initMap" type="text/javascript"></script>
+    <script>
+      function initMap(){
+        const map = new google.maps.MAP(document.getElementById('map'), {zoom:3,center:{lat:46,lng:-33}})
+      }
+    </script> -->
+
+    <script>
+      function initMap() {
+          var map = new google.maps.Map(document.getElementById("map"), {
+              zoom: 3,
+              center: {
+                  lat: 46.619261,
+                  lng: -33.134766
+              }
+          });
+      }
+  </script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4URTnGHXQNlmrtIlfdICht6Pc94yMN8s&callback=initMap"></script>    
   </body>
 </html>
