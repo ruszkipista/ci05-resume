@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <!-- PAGE TITLE -->
+    <title>Rosie</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Font Awsome CSS -->
@@ -13,8 +15,6 @@
     <!-- local CSS -->
     <link rel="stylesheet" href="./assets/css/github.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
-    <!-- PAGE TITLE -->
-    <title>Rosie</title>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- local JS -->
@@ -64,17 +64,17 @@
     </header>
 
     <!-- MAIN -->
-    <main class="contact row bg-color-contact">
+    <main class="contact row bg-color-social">
         <!-- GITHUB PROJECTS -->
         <div class="col-12">
           <h3 class="text-uppercase text-center pt-2">View My GitHub Projects:</h3>
           <h5 class="text-uppercase text-center pt-2 pb-2">(or change the username to search for other user profiles)</h5>
         </div>
 
-        <div class="center-form">
-          <input type="text" id="gh-username" value="octocat" oninput="fetchGitHubInformation()">
-          <div id="gh-user-data" class="clearfix"></div>
-          <div id="gh-repo-data" class="clearfix"></div>
+        <div class="text-center col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3" action="">
+          <input type="text" id="github-user-name" value="octocat" oninput="fetchGitHubInformation();">
+          <div id="github-user-data"></div>
+          <div id="github-repo-data"></div>
       </div>
 
     </main>

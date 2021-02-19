@@ -149,16 +149,17 @@ img {
 
 /* input field */
 
-#gh-username {
+#github-user-name {
   display: block;
   padding: 5px 8px;
   font-size: 1.4em;
   color: #666;
   max-width: 550px;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
+  border: 3px solid var(--color-contact);
 }
 
-#gh-submit {
+#github-submit {
   display: inline-block;
   padding: 8px 18px;
   font-size: 14px;
@@ -180,7 +181,7 @@ img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-#gh-submit:hover {
+#github-submit:hover {
   background-color: #dadada;
   background-image: -webkit-linear-gradient(#eaeaea, #dadada);
   background-image: -moz-linear-gradient(#eaeaea, #dadada);
@@ -190,7 +191,7 @@ img {
   border-color: #ccc #ccc #b5b5b5;
 }
 
-#gh-submit:active {
+#github-submit:active {
   background-color: #dadada;
   background-image: none;
   border-color: #b5b5b5;
