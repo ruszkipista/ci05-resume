@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <!-- PAGE TITLE -->
     <title>Rosie</title>
-    <style>
-      div#map {min-height: 360px;}
-    </style>
   </head>
 
   <body class="container-fluid p-0 m-0">
@@ -68,7 +65,7 @@
         <div class="bg-color-social col-md-4 p-4">
           <h3 class="text-uppercase ps-4">Conferences and Meetups attended</h3>
           <!-- GOOGLE MAP -->
-          <div id="map" class="row"></div>
+          <div id="map" class="row" style="min-height: 360px;"></div>
         </div>
 
         <!-- MY GROUPS -->
@@ -164,25 +161,6 @@
     <!-- Google map -->
   <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4URTnGHXQNlmrtIlfdICht6Pc94yMN8s&callback=initMap"></script>    
-  <script>
-    function initMap() {
-      const mapProperties = {
-            zoom: 9,
-            center: {lat: 40.8, lng: -73.93  }
-        }
-      let map = new google.maps.Map(document.getElementById("map"), mapProperties);
-
-      const labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
-      const locations = [{lat: 40.785091, lng: -73.968285},
-                         {lat: 41.084045, lng: -73.874256},
-                         {lat: 40.754932, lng: -73.984016}];
-      const markers = locations.map(function(location, index) {
-          return new google.maps.Marker({position: location, 
-                                        label:     labels[index % labels.length]});
-      });
-      const markerImagePath = 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m';
-      const markerCluster = new MarkerClusterer(map, markers, {imagePath: markerImagePath});
-    }
-  </script>
+  <script src="./assets/js/gmap.js" type="text/javascript"></script>
 </body>
 </html>
