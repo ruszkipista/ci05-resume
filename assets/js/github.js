@@ -29,12 +29,23 @@ function displayRepos(repos) {
                                      </div>`;
     }
 }
-function status(response) {
+
+function handleStatus(response) {
     if (response.status >= 200 && response.status < 300) {
         return Promise.resolve(response)
+    } else if (response.status === 403){
+        const resetTime = new Date(response.headers.get('X-RateLimit-Reset') * 1000);
+        return Promise.reject(new Error(`Too many requests, please wait until ${resetTime.toLocaleTimeString()}`));
     } else {
         return Promise.reject(new Error(response.statusText))
     }
+}
+
+function handleError(error){
+    const usernameElement = document.getElementById('github-user-name');
+    const userdataElement = document.getElementById('github-user-data');    
+    console.error(error);
+    userdataElement.innerHTML = `<h2>No info found for user ${usernameElement.value}. ${error.message}</h2>`;
 }
 
 function fetchGitHubInformation() {
@@ -51,22 +62,16 @@ function fetchGitHubInformation() {
     // https://www.pluralsight.com/guides/using-fetch-with-github-api-v3
     // https://developers.google.com/web/updates/2015/03/introduction-to-fetch
     fetch(`https://api.github.com/users/${usernameElement.value}`, { headers: { 'Accept': 'application/vnd.github.v3+json' } })
-        .then(status)
+        .then(handleStatus)
         .then(response => response.json())
         .then(displayUser)
-        .catch(error => {
-            console.error(error);
-            userdataElement.innerHTML = `<h2>No info found for user ${usernameElement.value}</h2>`;
-        });
+        .catch(handleError);
 
     fetch(`https://api.github.com/users/${usernameElement.value}/repos`, { headers: { 'Accept': 'application/vnd.github.v3+json' } })
-        .then(status)
+        .then(handleStatus)
         .then(response => response.json())
         .then(displayRepos)
-        .catch(error => {
-            console.error(error);
-            userdataElement.innerHTML = `<h2>No info found for user ${usernameElement.value}</h2>`;
-        });
+        .catch(handleError);
 
 }
 
